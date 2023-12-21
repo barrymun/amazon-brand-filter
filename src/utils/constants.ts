@@ -1,7 +1,7 @@
 export const actionContainerWidth: string = "200px";
 export const actionContainerHeight: string = "300px";
 
-export const actionContainerId: string = "action-container";
+export const actionContainerId: string = "abf-action-container";
 export const actionContainerClosedStyle: string = `
     width: 0;
 `;

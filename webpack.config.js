@@ -1,6 +1,7 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = (env, argv) => {
   return {
@@ -10,6 +11,7 @@ module.exports = (env, argv) => {
       background: "./src/background/index.ts",
       content: "./src/content/index.ts",
       popup: "./src/popup/index.ts",
+      popup: "./src/utils/index.ts",
     },
     module: {
       rules: [
@@ -22,6 +24,12 @@ module.exports = (env, argv) => {
     },
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
+      alias: {
+        "~/": "./src"
+      },
+      plugins: [
+        new TsconfigPathsPlugin(),
+      ]
     },
     output: {
       filename: "[name].js",
@@ -32,7 +40,7 @@ module.exports = (env, argv) => {
       new CopyPlugin({
         patterns: [
           { from: "manifest.json", to: "./" },
-          { from: "src/icons", to: "icons" },
+          { from: "src/assets/icons", to: "icons" },
         ],
       }),
     ],

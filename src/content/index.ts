@@ -1,6 +1,6 @@
-import { ActionController } from "./action-controller";
-import { MessageType, actionContainerId, actionContainerClosedStyle } from "./constants";
-import { State } from "./state";
+import { ActionController } from "content/action-controller";
+import { MessageType, actionContainerId, actionContainerClosedStyle } from "utils/constants";
+import { State } from "utils/state";
 
 let actionController: ActionController | undefined;
 

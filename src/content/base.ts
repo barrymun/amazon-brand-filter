@@ -1,5 +1,5 @@
-import { actionContainerId, actionContainerWidth } from "./constants";
-import { State } from "./state";
+import { actionContainerId, actionContainerWidth } from "../utils/constants";
+import { State } from "../utils/state";
 
 export class Base {
   private state!: State;
