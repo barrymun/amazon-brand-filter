@@ -1,0 +1,32 @@
+{
+  "name": "amazon-brand-filter",
+  "description": "amazon-brand-filter",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "amazon-brand-filter"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "include_globs": [
+        "*://*.amazon.*/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/abf-disabled-128.png",
+    "48": "icons/abf-disabled-128.png",
+    "128": "icons/abf-disabled-128.png"
+  }
+}
