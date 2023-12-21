@@ -5,6 +5,13 @@ import { State } from "utils/state";
 let actionController: ActionController | undefined;
 let isInserted: boolean = false;
 
+// listen for messages from the background script
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  if (!actionController) return;
+  actionController.toggleVisibility();
+  sendResponse(MessageType.actionClickedResponse); // synchronously
+});
+
 const handleInsert = () => {
   // if the div has already been added, do nothing
   if (isInserted) {
@@ -36,10 +43,3 @@ const handleInsert = () => {
 };
 
 handleInsert();
-
-// listen for messages from the background script
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (!actionController) return;
-  actionController.toggleVisibility();
-  sendResponse(MessageType.actionClickedResponse); // synchronously
-});

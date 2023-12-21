@@ -11,7 +11,8 @@ module.exports = (env, argv) => {
       background: "./src/background/index.ts",
       content: "./src/content/index.ts",
       popup: "./src/popup/index.ts",
-      popup: "./src/utils/index.ts",
+      utils: "./src/utils/index.ts",
+      remote: "./src/remote/index.ts",
     },
     module: {
       rules: [
