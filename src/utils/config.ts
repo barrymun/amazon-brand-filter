@@ -21,7 +21,3 @@ export enum MessageType {
   actionClicked = "actionClicked",
   actionClickedResponse = "actionClickedResponse",
 }
-
-export interface Message {
-  type: MessageType;
-}

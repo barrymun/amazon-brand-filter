@@ -1,4 +1,4 @@
-import { actionContainerId, actionContainerWidth } from "utils/constants";
+import { actionContainerId, actionContainerWidth } from "utils/config";
 import { State } from "utils/state";
 
 export class Base {

@@ -1,5 +1,5 @@
 import { ActionController } from "content/action-controller";
-import { MessageType, actionContainerId, actionContainerClosedStyle } from "utils/constants";
+import { MessageType, actionContainerId, actionContainerClosedStyle } from "utils/config";
 import { State } from "utils/state";
 
 let actionController: ActionController | undefined;

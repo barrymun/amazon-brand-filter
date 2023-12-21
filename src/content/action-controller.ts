@@ -1,5 +1,5 @@
 import { Base } from "content/base";
-import { actionContainerClosedStyle, actionContainerOpenStyle } from "utils/constants";
+import { actionContainerClosedStyle, actionContainerOpenStyle } from "utils/config";
 
 export class ActionController extends Base {
   public toggleVisibility = () => {

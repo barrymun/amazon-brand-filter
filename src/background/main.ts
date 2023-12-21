@@ -1,4 +1,5 @@
-import { Message, MessageType } from "utils/constants";
+import { MessageType } from "utils/config";
+import { Message } from "utils/types";
 
 chrome.action.onClicked.addListener((tab) => {
   console.log("action clicked");
