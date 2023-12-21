@@ -1,9 +1,8 @@
 import { ActionController } from "content/action-controller";
-import { MessageType, actionContainerId, actionContainerClosedStyle } from "utils/config";
+import { MessageType, actionContainerId, actionContainerClosedStyle, actionIframeStyle } from "utils/config";
 import { State } from "utils/state";
 
 let actionController: ActionController | undefined;
-
 let isInserted: boolean = false;
 
 const handleInsert = () => {
@@ -20,6 +19,12 @@ const handleInsert = () => {
   const actionContainer = document.createElement("div");
   actionContainer.setAttribute("id", actionContainerId);
   actionContainer.setAttribute("style", actionContainerClosedStyle);
+
+  const actionIframe = document.createElement("iframe");
+  actionIframe.setAttribute("src", chrome.runtime.getURL("action.html"));
+  actionIframe.setAttribute("style", actionIframeStyle);
+
+  actionContainer.appendChild(actionIframe);
   document.body.appendChild(actionContainer);
 
   // set up the controllers

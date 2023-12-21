@@ -28,5 +28,15 @@
     "16": "icons/abf-disabled-128.png",
     "48": "icons/abf-disabled-128.png",
     "128": "icons/abf-disabled-128.png"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "action.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }

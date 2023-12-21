@@ -1,0 +1,77 @@
+
+body {
+  width: 25em;
+  font-family: "Open Sans Light", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+section.clear-options {
+  padding: 0.5em 0;
+  margin: 1em 0;
+}
+
+#clear-button {
+  margin: 0 1.3em 1em 0;
+}
+
+section.clear-options input,
+section.clear-options>select,
+#clear-button {
+  float: right;
+}
+
+label {
+  display: block;
+  padding: 0.2em 0;
+}
+
+label:hover {
+  background-color: #EAEFF2;
+}
+
+.title {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.spacer {
+  display: block;
+  margin-bottom: 1rem;
+  border-bottom: none;
+}
+
+.last-run {
+  float: right;
+  
+}
+
+.abf-version{
+  float: right;
+  font-size: 0.8em;
+  color:grey;
+  font-weight: bold;
+}
+
+.indent{  
+  margin-left: 1.3em;
+}
+
+.abf-personal-block-text{
+  margin-top: .5em;
+  margin-left: 1.6em;
+}
+
+#abf-personl-block-text{
+  resize:vertical;
+}
+.abf-personal-block-button{
+  margin-right: 1em;
+  margin-left:1em;
+  float:right;
+
+}
+
+.resizable-textarea {
+  resize: vertical;
+}
