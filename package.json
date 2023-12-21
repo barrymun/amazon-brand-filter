@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/chrome": "^0.0.237",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
