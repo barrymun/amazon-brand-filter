@@ -1,4 +1,4 @@
-export const actionContainerWidth: string = "300px";
+export const actionContainerWidth: string = "400px";
 export const actionContainerHeight: string = "200px";
 
 export const actionContainerId: string = "abf-action-container";
@@ -19,6 +19,8 @@ export const actionContainerOpenStyle: string = `
 
 export const actionIframeStyle: string = `
   border: none;
+  width: 100%;
+  height: 100%;
 `;
 
 export enum MessageType {

@@ -1,3 +1,4 @@
+import { initialise } from "background/setup";
 import { MessageType } from "utils/config";
 import { Message } from "utils/types";
 
@@ -13,3 +14,6 @@ chrome.action.onClicked.addListener((tab) => {
     // no-op
   }
 });
+
+console.log("HERE");
+initialise();
